@@ -3,6 +3,8 @@ package cn.znpersonal.myapplication;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        mVideoView = (VideoView) findViewById(R.id.videoview_splash);
+        mVideoView = (FullScreenVideoView) findViewById(R.id.videoview_splash);
         mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + File.separator + R.raw.splash));
         mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
