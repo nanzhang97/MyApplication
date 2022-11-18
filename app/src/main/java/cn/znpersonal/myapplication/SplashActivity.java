@@ -25,6 +25,8 @@ public class SplashActivity extends AppCompatActivity {
                 mediaPlayer.start();
             }
         });
+
+
     }
 
     @Override
